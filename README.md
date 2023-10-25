@@ -3,11 +3,11 @@ An InvokeAI node wrapper for Google's Tesseract-OCR Engine.
 
 # How to install:
 - Install tesseract: https://github.com/UB-Mannheim/tesseract/wiki
-- Open a command prompt/terminal in the invokeAI nodes directory 
+- Open a command prompt/terminal in the invokeAI nodes directory
 - Run `git clone https://github.com/helix4u/ocr_node.git`
-- Run `pip install pytesseract`
-- Update tesseract install path in script as necissary.
-- Have fun.
+- Run `pip install pytesseract` from within the invoke env
+- Update tesseract install path in script as necissary
+- Have fun
 
 # Todo:
 - Clean up imports

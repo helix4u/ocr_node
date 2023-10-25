@@ -1,5 +1,5 @@
 # ocr_node
-An InvokeAI node wrapper for Google's Tesseract-OCR Engine.
+An InvokeAI node wrapper for Tesseract-OCR Engine.
 
 # How to install:
 - Install tesseract: https://github.com/UB-Mannheim/tesseract/wiki

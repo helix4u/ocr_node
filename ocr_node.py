@@ -10,17 +10,15 @@ from invokeai.app.services.image_records.image_records_common import ImageCatego
 from invokeai.app.invocations.baseinvocation import (
     BaseInvocation,
     BaseInvocationOutput,
-    FieldDescriptions,
     Input,
-    InputField,
     InvocationContext,
-    OutputField,
-    UIComponent,
-    UIType,
-    WithMetadata,
-    WithWorkflow,
     invocation,
     invocation_output,
+)
+from invokeai.app.invocations.fields import (
+    InputField,
+    OutputField,
+    UIType,
 )
 from invokeai.app.invocations.primitives import StringOutput
 import pytesseract
@@ -32,7 +30,7 @@ pytesseract.pytesseract.tesseract_cmd = r'C:\Program Files\Tesseract-OCR\tessera
     title="Image to Text",
     tags=["image", "text", "OCR"],
     category="image",
-    version="1.0.0",
+    version="1.0.1",
 )
 class ImageToTextInvocation(BaseInvocation):
     """Extract text from an image using OCR."""
@@ -42,7 +40,7 @@ class ImageToTextInvocation(BaseInvocation):
 
     def invoke(self, context: InvocationContext) -> StringOutput:
         # Get PIL image
-        image = context.services.images.get_pil_image(self.image.image_name)
+        image = context._services.images.get_pil_image(self.image.image_name)
         
         # Perform OCR to extract text
         extracted_text = pytesseract.image_to_string(image)

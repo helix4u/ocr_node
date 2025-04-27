@@ -12,7 +12,6 @@ An InvokeAI node wrapper for Tesseract-OCR Engine.
 - Have fun
 
 # Todo:
-- Clean up imports
 - Add path input for tesseract install
 - Add options for languages/etc(?)
 

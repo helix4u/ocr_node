@@ -24,7 +24,7 @@ pytesseract.pytesseract.tesseract_cmd = r'C:\Program Files\Tesseract-OCR\tessera
 class ImageToTextInvocation(BaseInvocation):
     """Extract text from an image using OCR."""
 
-    image: ImageField = InputField(default=None, description="The image for text extraction")
+    image: Optional[ImageField] = InputField(default=None, description="The image for text extraction")
 
     def invoke(self, context: InvocationContext) -> StringOutput:
         # Retrieve the PIL image
